@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Card } from "reactstrap";
+import { Card, Col, Row } from "reactstrap";
 
 const Style = styled(Card)`
   margin: 20px auto;
@@ -26,6 +26,19 @@ const Style = styled(Card)`
     font-size: 16px;
     justify-content: space-between;
   }
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  .col {
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left;
+    width: 50%;
+  }
 `;
 const CustomCard = (props) => {
   let { data } = props;
@@ -35,26 +48,26 @@ const CustomCard = (props) => {
     <>
       <Style>
         <h1>Authors Profile</h1>
-        <h4>
-          <span>Name</span>
-          <span>{data.name}</span>
-        </h4>
-        <h4>
-          <span>Username</span>
-          <span>{data.username}</span>
-        </h4>
-        <h4>
-          <span>Email</span>
-          <span>{data.email}</span>
-        </h4>
-        <h4>
-          <span>Phone</span>
-          <span>{data.phone}</span>
-        </h4>
-        <h4>
-          <span>Website</span>
-          <span>{data.website}</span>
-        </h4>
+        <Row>
+          <Col className="name">Name</Col>
+          <Col>{data.name}</Col>
+        </Row>
+        <Row>
+          <Col className="name">Username</Col>
+          <Col>{data.username}</Col>
+        </Row>
+        <Row>
+          <Col className="name">Email</Col>
+          <Col>{data.email}</Col>
+        </Row>
+        <Row>
+          <Col className="name">Phone</Col>
+          <Col>{data.phone}</Col>
+        </Row>
+        <Row>
+          <Col className="name">Website</Col>
+          <Col>{data.website}</Col>
+        </Row>
       </Style>
     </>
   );

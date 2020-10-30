@@ -21,7 +21,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Card = ({ link, children }) => (
+const Card = ({ link, children, user, album }) => (
   <StyledLink to={link}>{children}</StyledLink>
 );
 
